@@ -1,11 +1,11 @@
 from dotenv import load_dotenv
 
-from langchain.document_loaders import PyMuPDFLoader
-from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain_openai import ChatOpenAI
+from langchain_openai import OpenAIEmbeddings
+from langchain_community.document_loaders import PyMuPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.vectorstores import Chroma
+from langchain_community.vectorstores import Chroma
 from langchain.chains import ConversationalRetrievalChain
-from langchain.chat_models import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 
 import chainlit as cl
